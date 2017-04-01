@@ -6,4 +6,5 @@ A Wechat Mini Program TOTP authenticator
 
 
 ![](https://github.com/weez15/dtml-totp/raw/master/qrcode.jpg)
-![](https://github.com/weez15/dtml-totp/raw/master/screenshot.png)
+</br>
+![](https://github.com/weez15/dtml-totp/raw/master/screenshot.png =533.04*947.61)
