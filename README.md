@@ -7,4 +7,4 @@ A Wechat Mini Program TOTP authenticator
 
 ![](qrcode.jpg)
 </br>
-![](screenshot.png =533.04x947.61)
+![](screenshot.png)
