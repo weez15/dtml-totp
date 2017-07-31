@@ -2184,8 +2184,10 @@ function Calc(data) {
 }
 
 function ParseCode(href) {
+	href = unescape(href);
+
 	var data = {}
-	var info = href.match(/otpauth:\/\/totp\/([a-zA-Z0-9._:-]*@[a-zA-Z0-9._-]*)/)
+	var info = href.match(/otpauth:\/\/totp\/([a-zA-Z0-9._:-]*[@a-zA-Z0-9._-]*)/)
 	if (info == null) return false;
 	if (info[1].indexOf(':') < 0) 
 	{
@@ -2195,9 +2197,10 @@ function ParseCode(href) {
 		data.issuer = info[1].split(':')[0]
 		data.account = info[1].split(':')[1]
 	}
+
 	var arg_issuer = href.match(/issuer=[A-Za-z0-9]*/)
 	if (arg_issuer != null) data.issuer = arg_issuer[0].replace("issuer=", "")
-	var arg_secret = href.match(/secret=[A-Za-z0-9]{16}/)
+	var arg_secret = href.match(/secret=[A-Za-z0-9]*/)
 	if (arg_secret == null) return false;
 	data.secret = arg_secret[0].replace("secret=", "")
 	data.guid = guid()
